@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(null.css);
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: black;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+.display {
+  /* width: 100%; */
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 8rem;
+  margin: 10px 50px;
+  border: 1px solid orange;
+  color: orange;
+  font-size: 2rem;
+}
+.enteredNumber {
+  flex: 1;
+  align-self: flex-start;
+}
+.persentage,
+.result {
+  min-width: 20%;
+}
+.digits-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.number-element {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 1%; */
+}
+
+.button__number {
+  width: 100px;
+  height: 100px;
+
+  font-size: 40px;
+  font-weight: 700;
+  color: orange;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.button__number.none {
+  pointer-events: none;
+}
+.button__number:active {
+  background-color: rgba(127, 255, 212, 0.247);
+}
