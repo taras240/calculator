@@ -38,15 +38,34 @@ main {
 }
 .enteredNumber {
   flex: 1;
+  max-width: 300px;
+  overflow: auto;
   align-self: flex-start;
+  height: fit-content;
 }
 .enteredNumber.inactive {
   color: #5c3e06;
 }
-.persentage {
+.persentage-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-size: 3rem;
 }
+.percentage-element {
+  font-size: 2rem;
+  color: #5c3e06;
+  padding: 5px;
+}
+.percentage-element.active {
+  color: orange;
+  border: 1px solid white;
+  border-radius: 10px;
+}
 .result {
+  flex: 1;
+  overflow: scroll;
 }
 .digits-block {
   display: flex;
