@@ -6,6 +6,9 @@ let baseString = "";
 let clearNumber = true;
 let timeOut;
 function enterDigit(digit) {
+  if (enteredNumber.innerText.length >= 6) {
+    return;
+  }
   if (clearNumber) {
     enteredNumber.innerText = digit;
   } else {
