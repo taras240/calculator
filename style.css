@@ -9,7 +9,7 @@ body {
   flex-direction: column;
 }
 h1 {
-  color: orange;
+  color: white;
   font-family: consolas;
   font-size: 2rem;
   text-align: center;
@@ -22,18 +22,17 @@ main {
   flex: 1;
 }
 .display {
-  /* width: 100%; */
-  min-height: 15rem;
+  height: 15rem;
   user-select: none;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  /* height: 8rem; */
-  flex: 1;
   margin: 10px 10px;
-  border: 1px solid orange;
+  border-bottom: 1px solid orange;
+  border-top: 1px solid orange;
+
   color: orange;
   font-size: 4.5rem;
 }
@@ -67,8 +66,8 @@ main {
   height: 5.5rem;
 
   font-size: 40px;
-  font-weight: 700;
-  color: orange;
+  font-weight: 400;
+  color: white;
   background-color: transparent;
   border-radius: 50%;
   overflow: hidden;
@@ -76,8 +75,8 @@ main {
   border: none;
   cursor: default;
 }
-.button__number.none {
-  pointer-events: none;
+.button__number.CE {
+  color: orange;
 }
 .button__number:active {
   background-color: rgba(127, 255, 212, 0.247);
