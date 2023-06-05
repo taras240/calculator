@@ -8,10 +8,10 @@
     <title>Calculator</title>
   </head>
   <body>
-    <header><h1>Calculator 0.35</h1></header>
+    <header><h1>Націнка товару v0.4</h1></header>
     <main>
       <section class="display">
-        <div class="enteredNumber"></div>
+        <div class="enteredNumber" onclick="setNumber()"></div>
         <div class="persentage-list">
           <div
             class="percentage-element"
@@ -41,6 +41,11 @@
           >
             +30%
           </div>
+        </div>
+
+        <div class="quantity">
+          <div class="quanttity-title">Кількість:</div>
+          <div class="quantity-number" onclick="setQuantity()">1</div>
         </div>
         <div class="result"></div>
       </section>
@@ -92,7 +97,7 @@
             </button>
           </li>
           <li class="number-element">
-            <button class="button__number CE" onclick="clearDisplay()">
+            <button class="button__number CE" onclick="refreshDisplay()">
               CE
             </button>
           </li>
