@@ -39,12 +39,17 @@ main {
 .enteredNumber {
   flex: 1;
   max-width: 300px;
-  overflow: auto;
   align-self: flex-start;
   height: fit-content;
+  margin-top: 5px;
+  padding: 3px;
+  border: 1px solid transparent;
 }
 .enteredNumber.inactive {
-  color: #5c3e06;
+  /* color: #5c3e06; */
+  border: 1px solid orange;
+  background-color: #1b1201;
+  border-radius: 10px;
 }
 .persentage-list {
   width: 100%;
@@ -55,17 +60,16 @@ main {
 }
 .percentage-element {
   font-size: 2rem;
-  color: #5c3e06;
+  color: #3d2904;
   padding: 5px;
 }
 .percentage-element.active {
   color: orange;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 10px;
 }
 .result {
   flex: 1;
-  overflow: scroll;
 }
 .digits-block {
   display: flex;

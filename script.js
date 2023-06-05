@@ -24,7 +24,7 @@ function enterDigit(digit) {
   result.innerText = (baseNumber * percentage).toFixed(2);
   clearNumber = false;
   clearTimeout(timeOut);
-  timeOut = setTimeout(() => clearDisplay(), 1500);
+  timeOut = setTimeout(() => clearDisplay(), 1000);
 }
 function clearDisplay() {
   enteredNumber.classList.add("inactive");
