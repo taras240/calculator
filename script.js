@@ -6,7 +6,7 @@ let baseString = "";
 let clearNumber = true;
 let timeOut;
 function enterDigit(digit) {
-  window.navigator.vibrate(50);
+  window.navigator.vibrate(20);
   if (enteredNumber.classList.contains("inactive")) {
     enteredNumber.classList.remove("inactive");
     enteredNumber.innerText = digit;
