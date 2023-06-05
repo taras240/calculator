@@ -14,6 +14,8 @@ main {
 }
 .display {
   /* width: 100%; */
+  user-select: none;
+
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -45,7 +47,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 1%; */
 }
 
 .button__number {
@@ -57,10 +58,16 @@ main {
   color: orange;
   background-color: transparent;
   border-radius: 50%;
+  overflow: hidden;
+  user-select: none;
+  border: none;
+  cursor: default;
 }
 .button__number.none {
   pointer-events: none;
 }
+/* .button__number:hover,
+.button__number:focus, */
 .button__number:active {
   background-color: rgba(127, 255, 212, 0.247);
 }
