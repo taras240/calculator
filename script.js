@@ -6,12 +6,13 @@ let baseString = "";
 let clearNumber = true;
 let timeOut;
 function enterDigit(digit) {
-  if (enteredNumber.innerText.length >= 6) {
-    return;
-  }
-  if (clearNumber) {
+  if (enteredNumber.classList.contains("inactive")) {
+    enteredNumber.classList.remove("inactive");
     enteredNumber.innerText = digit;
   } else {
+    if (enteredNumber.innerText.length >= 6) {
+      return;
+    }
     enteredNumber.innerText += digit;
   }
   baseString = enteredNumber.innerText;
@@ -22,5 +23,6 @@ function enterDigit(digit) {
   timeOut = setTimeout(() => clearDisplay(), 1500);
 }
 function clearDisplay() {
-  enteredNumber.innerText = "";
+  enteredNumber.classList.add("inactive");
+  //   enteredNumber.innerText = "";
 }

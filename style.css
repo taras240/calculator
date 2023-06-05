@@ -5,17 +5,26 @@
 }
 body {
   background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: orange;
+  font-family: consolas;
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px 0 0;
 }
 main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90%;
+  flex: 1;
 }
 .display {
   /* width: 100%; */
+  min-height: 15rem;
   user-select: none;
-
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -26,15 +35,19 @@ main {
   margin: 10px 10px;
   border: 1px solid orange;
   color: orange;
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 .enteredNumber {
   flex: 1;
   align-self: flex-start;
 }
-.persentage,
+.enteredNumber.inactive {
+  color: #5c3e06;
+}
+.persentage {
+  font-size: 3rem;
+}
 .result {
-  min-width: 20%;
 }
 .digits-block {
   display: flex;
@@ -50,8 +63,8 @@ main {
 }
 
 .button__number {
-  width: 100px;
-  height: 100px;
+  width: 5.5rem;
+  height: 5.5rem;
 
   font-size: 40px;
   font-weight: 700;
@@ -66,8 +79,6 @@ main {
 .button__number.none {
   pointer-events: none;
 }
-/* .button__number:hover,
-.button__number:focus, */
 .button__number:active {
   background-color: rgba(127, 255, 212, 0.247);
 }
