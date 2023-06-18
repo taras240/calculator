@@ -75,5 +75,6 @@ function setNumber() {
   quantityElement.classList.remove("active");
 }
 function calcPrice() {
-  result.innerText = ((baseNumber * percentage) / quantity).toFixed(2);
+  result.innerText =
+    Math.round(((baseNumber * percentage) / quantity) * 100) / 100;
 }

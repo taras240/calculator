@@ -47,17 +47,19 @@ main {
   height: 5rem;
   font-size: 3.5rem;
   width: 100%;
-  /* max-width: 300px; */
   align-self: flex-start;
   justify-self: center;
   margin-top: 5px;
   padding: 3px;
   border: 1px solid transparent;
+  background-color: #1b1201;
+
+  display: flex;
+  align-items: center;
 }
 .enteredNumber.inactive {
   color: orangered;
   /* border: 1px solid orange; */
-  background-color: #1b1201;
   border-radius: 10px;
 }
 
@@ -83,6 +85,9 @@ main {
   display: flex;
   font-size: 2rem;
   justify-content: space-between;
+}
+.quanttity-title {
+  font-family: "Roboto";
 }
 .quantity-number {
   flex: 1;
@@ -116,11 +121,23 @@ main {
   font-weight: 400;
   color: white;
   background-color: transparent;
-  border-radius: 50%;
   overflow: hidden;
   user-select: none;
   border: none;
   cursor: default;
+  border-bottom: 1px solid rgba(255, 166, 0, 0.1);
+  border-right: 1px solid rgba(255, 166, 0, 0.1);
+}
+.button__number.zero,
+.button__number.CE,
+.button__number.dote {
+  border-bottom: 1px solid transparent;
+}
+.button__number.three,
+.button__number.six,
+.button__number.nine,
+.button__number.dote {
+  border-right: 1px solid transparent;
 }
 .button__number.CE {
   color: orange;
