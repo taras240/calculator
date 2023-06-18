@@ -1,3 +1,4 @@
+const WAITING_TIME_MILISECONDS = 1500;
 let digits = document.querySelectorAll(".button__number");
 let enteredNumber = document.querySelector(".enteredNumber");
 let result = document.querySelector(".result");
@@ -40,7 +41,7 @@ function changeBaseNumber(digit) {
   calcPrice();
   clearNumber = false;
   clearTimeout(timeOut);
-  timeOut = setTimeout(() => clearDisplay(), 1000);
+  timeOut = setTimeout(() => clearDisplay(), WAITING_TIME_MILISECONDS);
 }
 function changeQuantity(digit) {
   quantityElement.innerText += digit;
