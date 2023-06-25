@@ -53,9 +53,10 @@ function clearDisplay() {
 }
 function refreshDisplay() {
   enteredNumber.innerText = "";
-  result.innerText = "";
+  result.innerText = "0";
   enteredNumber.classList.remove("inactive");
   quantityElement.innerText = quantity = 1;
+  enteredNumber.click();
 }
 function changePercenage(element) {
   document.querySelectorAll(".percentage-element").forEach((element) => {

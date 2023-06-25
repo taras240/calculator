@@ -10,17 +10,17 @@
   </head>
   <body>
     <div class="wrapper">
-      <header><h1>Націнка товару v0.50</h1></header>
+      <header><h1>Націнка товару v0.51</h1></header>
       <main>
         <section class="display">
           <div class="enteredNumber" onclick="setNumber()"></div>
           <div class="persentage-list">
             <div
               class="percentage-element"
-              percent="1.15"
+              percent="1.05"
               onclick="changePercenage(this)"
             >
-              +15%
+              +5%
             </div>
             <div
               class="percentage-element active"
@@ -43,13 +43,20 @@
             >
               +30%
             </div>
+            <div
+              class="percentage-element"
+              percent="1.56"
+              onclick="changePercenage(this)"
+            >
+              +56%
+            </div>
           </div>
 
           <div class="quantity">
-            <div class="quanttity-title">Кількість:</div>
+            <div class="quanttity-title">Count:</div>
             <div class="quantity-number" onclick="setQuantity()">1</div>
           </div>
-          <div class="result"></div>
+          <div class="result">0</div>
         </section>
         <section class="buttons">
           <ul class="digits-block">
