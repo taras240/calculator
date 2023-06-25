@@ -1,4 +1,5 @@
 const WAITING_TIME_MILISECONDS = 1500;
+const MAX_LEIGHT = 8;
 let digits = document.querySelectorAll(".button__number");
 let enteredNumber = document.querySelector(".enteredNumber");
 let result = document.querySelector(".result");
@@ -31,7 +32,7 @@ function changeBaseNumber(digit) {
     enteredNumber.classList.remove("inactive");
     enteredNumber.innerText = digit;
   } else {
-    if (enteredNumber.innerText.length >= 6) {
+    if (enteredNumber.innerText.length >= MAX_LEIGHT) {
       return;
     }
     enteredNumber.innerText += digit;
@@ -76,6 +77,19 @@ function setNumber() {
   quantityElement.classList.remove("active");
 }
 function calcPrice() {
-  result.innerText =
-    Math.round(((baseNumber * percentage) / quantity) * 100) / 100;
+  let res = Math.round(((baseNumber * percentage) / quantity) * 100) / 100 + "";
+  result.innerText = res;
+  switch (true) {
+    case res.length > 9:
+      result.style.fontSize = "3rem";
+      break;
+    case res.length > 7:
+      result.style.fontSize = "4rem";
+      break;
+    case res.length > 0:
+      result.style.fontSize = "5rem";
+      break;
+    default:
+      break;
+  }
 }
