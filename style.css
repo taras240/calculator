@@ -14,7 +14,7 @@ body {
   margin: auto;
 }
 h1 {
-  display: none;
+  /* display: none; */
   color: #ffffff52;
   font-family: consolas;
   font-size: 2rem;
@@ -29,7 +29,7 @@ main {
   flex: 1;
 }
 .display {
-  height: 18rem;
+  /* max-height: 18rem; */
   user-select: none;
   padding: 0;
   display: flex;
@@ -40,18 +40,15 @@ main {
   color: orange;
 }
 .enteredNumber {
-  height: 5rem;
+  height: 6rem;
+  line-height: 6rem;
   font-size: 3.5rem;
   width: 100%;
-  align-self: flex-start;
-  justify-self: center;
   margin-top: 5px;
-  padding: 3px;
+  padding: 0 10px;
   border: 1px solid transparent;
   background-color: #1b1201;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
 }
 .enteredNumber.inactive {
   color: orangered;
@@ -69,7 +66,7 @@ main {
   font-size: 2rem;
   height: 2.5rem;
   margin: 1rem 0;
-  padding: 2px;
+  padding: 2px 6px;
   color: #3d2904;
 }
 .percentage-element.active {
@@ -99,12 +96,12 @@ main {
   border-bottom: 1px solid orange;
 }
 .result {
-  flex: 1;
-  display: flex;
+  width: 100%;
   align-items: center;
   font-size: 5rem;
-  height: 10rem;
   vertical-align: middle;
+  text-align: right;
+  line-height: 6rem;
 }
 .digits-block {
   display: flex;

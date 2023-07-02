@@ -1,8 +1,12 @@
-const WAITING_TIME_MILISECONDS = 1500;
-const MAX_LEIGHT = 8;
 let digits = document.querySelectorAll(".button__number");
 let enteredNumber = document.querySelector(".enteredNumber");
 let result = document.querySelector(".result");
+const RESULT_MAX_FONT_SIZE = parseInt(window.getComputedStyle(result).fontSize);
+const ENTEREDNUMBER_MAX_FONT_SIZE = parseInt(
+  window.getComputedStyle(enteredNumber).fontSize
+);
+const WAITING_TIME_MILISECONDS = 1500;
+const MAX_LEIGHT = 15;
 let quantityElement = document.querySelector(".quantity-number");
 let quantity = 1;
 let baseNumber = 0;
@@ -39,6 +43,7 @@ function changeBaseNumber(digit) {
   }
   baseString = enteredNumber.innerText;
   baseNumber = parseFloat(baseString);
+  updateFontSize(enteredNumber);
   calcPrice();
   clearNumber = false;
   clearTimeout(timeOut);
@@ -79,17 +84,18 @@ function setNumber() {
 function calcPrice() {
   let res = Math.round(((baseNumber * percentage) / quantity) * 100) / 100 + "";
   result.innerText = res;
-  switch (true) {
-    case res.length > 9:
-      result.style.fontSize = "3rem";
-      break;
-    case res.length > 7:
-      result.style.fontSize = "4rem";
-      break;
-    case res.length > 0:
-      result.style.fontSize = "5rem";
-      break;
-    default:
-      break;
+  updateFontSize(result);
+}
+function updateFontSize(element) {
+  while (
+    element.scrollWidth <= element.clientWidth &&
+    parseInt(window.getComputedStyle(element).fontSize) <= RESULT_MAX_FONT_SIZE
+  ) {
+    element.style.fontSize =
+      parseInt(window.getComputedStyle(element).fontSize) + 1 + "px";
+  }
+  while (element.scrollWidth > element.clientWidth) {
+    element.style.fontSize =
+      parseInt(window.getComputedStyle(element).fontSize) - 1 + "px";
   }
 }
