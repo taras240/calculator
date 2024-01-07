@@ -99,3 +99,9 @@ function updateFontSize(element) {
       parseInt(window.getComputedStyle(element).fontSize) - 1 + "px";
   }
 }
+addEventListener("keydown", (key) => {
+  const pressedNumber = parseInt(key.key);
+  if (!isNaN(pressedNumber)) {
+    enterDigit(pressedNumber);
+  }
+});
