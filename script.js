@@ -30,7 +30,7 @@ function enterDigit(digit) {
       break;
   }
 }
-
+//`
 function changeBaseNumber(digit) {
   if (enteredNumber.classList.contains("inactive")) {
     enteredNumber.classList.remove("inactive");
